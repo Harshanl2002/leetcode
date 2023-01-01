@@ -1,15 +1,9 @@
 class Solution {
-    public int[] sortByBits(int[] arr) {
-        for(int i=0;i<arr.length;i++)
+    public int[] buildArray(int[] n) {
+        int arr[]=new int[n.length],ind=0;
+        for(int i:n)
         {
-            arr[i]+=Integer.bitCount(arr[i])*10001;
-           
-        }
-        Arrays.sort(arr);
-        for(int i=0;i<arr.length;i++)
-        {
-             System.out.print(arr[i]%10001+" ");
-            arr[i]=arr[i]%10001;
+            arr[ind++]=n[i];
         }
         return arr;
     }
